@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.Master.cs" Inherits="Contactlist_web___3._0.Site1" %>
+
+<%@ Register Src="~/EditModal.ascx" TagPrefix="uc1" TagName="EditModal" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        tr.main_footer {
+            background-color:black;
+            color:white;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:EditModal runat="server" id="EditModal" />
+    <table style="width: 100%;">
+        <tr>
+            <td colspan="3" class="main_header">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">The Contactlist</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/main.aspx">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Contact
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="./AddContact.aspx">Add</a></li>
+                                    <li><a href="./AddContact.aspx">Edit</a></li>
+                                    <li><a href="./AddContact.aspx">Delete</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Adress</a></li>
+                            <li><a href="#">Phone</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server"></asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="main_left">
+            <asp:ContentPlaceHolder ID="leftmenu" runat="server"></asp:ContentPlaceHolder>
+
+            </td>
+            <td class="main_main">
+            <asp:ContentPlaceHolder ID="mainbody" runat="server"></asp:ContentPlaceHolder>
+            </td>
+            <td class="main_right">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="main_footer" colspan="3"><p>Create by: Johan <br />Special Thanks to jQuery and bootstrap</p>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
