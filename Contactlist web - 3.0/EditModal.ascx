@@ -6,7 +6,6 @@
               $('input.tboxLastname').val(lastname);
               $('input.tboxSSN').val(ssn);
               $('input.hiddenID').val(id);
-              $('#btnUpdate').attr('Text').val(Update);
               $('#editContactModal').modal();
               
           }

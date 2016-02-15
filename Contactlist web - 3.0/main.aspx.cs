@@ -48,7 +48,7 @@ namespace Contactlist_web___3._0
             test += "<th></th>";
             test += "<th></th>";
             test += "<th></th>";
-            test += "<th></th>";
+            test += <th></th>;
             test += "</tr>";
             test += "</thead>";
             test += "<tbody>";

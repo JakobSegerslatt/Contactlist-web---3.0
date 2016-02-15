@@ -22,7 +22,7 @@ namespace Contactlist_web___3._0
         {
             int cid = ContactManager.ContactManager.addContact(tboxFirstnameAdd.Text, tboxLastnameAdd.Text, tboxSSNAdd.Text);
 
-            if (cid != 0)
+            if (cid == 0)
             {
                 Response.Redirect("./main.aspx");
             }
